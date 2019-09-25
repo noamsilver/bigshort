@@ -1,2 +1,0 @@
-# bigshort
-Investment dashboard task
