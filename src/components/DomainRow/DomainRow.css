@@ -1,0 +1,8 @@
+.domain-row {
+  height: 40px;
+  line-height: 40px;
+}
+
+.domain-row .logo {
+  height: 100%;
+}
