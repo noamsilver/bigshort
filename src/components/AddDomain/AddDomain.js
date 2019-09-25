@@ -9,9 +9,8 @@ export default () => {
   useEffect(() => {
     const attemptAddDomain = async () => {
       if (addDomainWasClicked) {
-        
-        await addToDomainList(domain);
         setAddDomainWasClicked(false);
+        await addToDomainList(domain);
       };
     };
     attemptAddDomain();

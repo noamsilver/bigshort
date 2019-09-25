@@ -5,8 +5,7 @@ import domainListContext from '../../context/domainListContext';
 const DomainListProvider = domainListContext.Provider;
 export default ({ children }) => {
   const [ domainList, updateDomainList ] = useState([]);
-  const addToDomainList = async domain => {
-    console.log('in addToDomainList', {domain});    
+  const addToDomainList = async domain => {   
     const res = await fetch(`https://company-stream.clearbit.com/v2/companies/find?domain=${domain}`, {
       method: 'GET',
       headers: {
@@ -15,8 +14,6 @@ export default ({ children }) => {
     });
     if (res.ok) {
       const newDomain = await res.json();
-      console.log({newDomain, domainList});
-      
       updateDomainList(() => ([
         ...domainList,
         newDomain,
